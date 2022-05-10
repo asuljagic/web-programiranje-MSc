@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/nova.css">
-    <title>Document</title>
+    <title>Rollover vježba</title>
 </head>
 <body>
-    <a href="index.html" class="btn btn-primary mt-3 ms-3">Početna</a>
-    <center><a href="#" onmouseover="window.document.slika.src='sunce.jpg';"
+    <a href="index.html" class="btn btn-primary mt-3 ms-3 mb-3">Početna</a>
+    <div>
+    <a href="#" onmouseover="window.document.slika.src='sunce.jpg';"
     onmouseout="window.document.slika.src='oblak.jpg';">
         <img src="oblak.jpg" name="slika" alt="nebo">
     </a> <br>
@@ -18,6 +19,6 @@
 onclick="var boja=prompt('Unesite željenu boju','naprimjer blue');
 document.body.style.backgroundColor=boja;">
 Promjeni boju pozadine.</a>
-</center>
+</div>
 </body>
 </html>
