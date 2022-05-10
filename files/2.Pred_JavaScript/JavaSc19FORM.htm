@@ -1,1 +1,54 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML><HEAD><TITLE>JavaScript i HTML form: Citanje iz tekst polja,,JavaScript funkcija, jednostavni kalkulator</TITLE><SCRIPT LANGUAGE="JavaScript"><!--function SumirajPolja(){var broj1=parseFloat(window.document.mojaforma.polje1.value);var broj2=parseFloat(window.document.mojaforma.polje2.value);var suma=broj1+broj2;//alert(broj1+" plus "+broj2+" je: "+suma);window.document.mojaforma.rezultat.value=suma;}function PodjeliPolja(){var broj1=parseFloat(window.document.mojaforma.polje1.value);var broj2=parseFloat(window.document.mojaforma.polje2.value);var rez=broj1/broj2;//alert(broj1+" kroz "+broj2+" je: "+rez);window.document.mojaforma.rezultat.value=rez;}function PomnoziPolja(){var broj1=parseFloat(window.document.mojaforma.polje1.value);var broj2=parseFloat(window.document.mojaforma.polje2.value);var rez=broj1*broj2;//alert(broj1+" kroz "+broj2+" je: "+rez);window.document.mojaforma.polje1.value=rez;}//--></SCRIPT></HEAD>  <BODY ><FORM name="mojaforma">Broj 1:<INPUT TYPE="text" NAME="polje1"><BR>Broj 2:<INPUT TYPE="text" NAME="polje2"><BR>Rezultat:<INPUT TYPE="text" NAME="rezultat"><BR><A HREF="#" onClick="SumirajPolja();"> Zbroji ih!</A><A HREF="#" onClick="PodjeliPolja(); "> Podjeli ih!</A><A HREF="#" onClick="PomnoziPolja(); "> Pomnozi ih!</A></FORM><!--probati verziju pisanja rezultata u drugo polje.To se dobije kada se prebaci Java komentar na alert ikada se skine Html komentar sa Rezultat: u bodyu--></BODY></HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>JavaScript i HTML form: Citanje iz tekst polja,
+,JavaScript funkcija, jednostavni kalkulator</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+function SumirajPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var suma=broj1+broj2;
+//alert(broj1+" plus "+broj2+" je: "+suma);
+window.document.mojaforma.rezultat.value=suma;
+}
+
+
+function PodjeliPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var rez=broj1/broj2;
+//alert(broj1+" kroz "+broj2+" je: "+rez);
+window.document.mojaforma.rezultat.value=rez;
+}
+function PomnoziPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var rez=broj1*broj2;
+//alert(broj1+" kroz "+broj2+" je: "+rez);
+window.document.mojaforma.polje1.value=rez;
+}
+//-->
+</SCRIPT>
+</HEAD>
+  
+<BODY >
+<FORM name="mojaforma">
+Broj 1:<INPUT TYPE="text" NAME="polje1"><BR>
+Broj 2:<INPUT TYPE="text" NAME="polje2"><BR>
+Rezultat:<INPUT TYPE="text" NAME="rezultat"><BR>
+<A HREF="#" onClick="SumirajPolja();"> Zbroji ih!</A>
+<A HREF="#" onClick="PodjeliPolja(); "> Podjeli ih!</A>
+<A HREF="#" onClick="PomnoziPolja(); "> Pomnozi ih!</A>
+</FORM>
+
+
+<!--probati verziju pisanja rezultata u drugo polje.
+To se dobije kada se prebaci Java komentar na alert i
+kada se skine Html komentar sa Rezultat: u bodyu-->
+</BODY>
+
+</HTML>

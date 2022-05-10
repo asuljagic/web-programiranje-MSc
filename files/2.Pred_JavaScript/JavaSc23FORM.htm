@@ -1,1 +1,48 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML><HEAD><TITLE>Citanje i setiranje Checkbox-ova:primjer Kviz</TITLE><SCRIPT LANGUAGE="JavaScript"><!--function rezkviza(){var tocnih=0;if (window.document.mojaforma.pitanje1.checked==true)	{tocnih=tocnih+1;}	else	{window.document.mojaforma.pitanje1.checked=true;}if (window.document.mojaforma.pitanje2.checked==true)	{tocnih=tocnih+1;}	else	{window.document.mojaforma.pitanje2.checked=true;}if (window.document.mojaforma.pitanje3.checked==false)	{tocnih=tocnih+1;}	else	{window.document.mojaforma.pitanje3.checked=false;}	if (window.document.mojaforma.pitanje4.checked==true)	{tocnih=tocnih+1;}	else	{window.document.mojaforma.pitanje4.checked=true;}alert("Imate "+tocnih+" tocnih odgovara! Pogledajte tocne rezultate.");}//--></SCRIPT></HEAD>  <BODY ><H2>Odgovorite na slijedeca pitanja:</H2><FORM NAME="mojaforma"><INPUT TYPE="checkbox" NAME="pitanje1">Hrvatska je 1998. bila treæa na Svjetskom prvenstvu.<BR><INPUT TYPE="checkbox" NAME="pitanje2">Izgubili smo od Francuske u polufinalu.<BR><INPUT TYPE="checkbox" NAME="pitanje3">Zlatnu kopaèku je dobio Boban.<BR><INPUT TYPE="checkbox" NAME="pitanje4">Pariz je glavni grad Francuske.<P><INPUT TYPE="button" VALUE="Rezultati kviza" onClick="rezkviza();"></FORM></BODY></HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Citanje i setiranje Checkbox-ova:primjer Kviz</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+function rezkviza()
+{
+var tocnih=0;
+if (window.document.mojaforma.pitanje1.checked==true)
+	{tocnih=tocnih+1;}
+	else
+	{window.document.mojaforma.pitanje1.checked=true;}
+if (window.document.mojaforma.pitanje2.checked==true)
+	{tocnih=tocnih+1;}
+	else
+	{window.document.mojaforma.pitanje2.checked=true;}
+if (window.document.mojaforma.pitanje3.checked==false)
+	{tocnih=tocnih+1;}
+	else
+	{window.document.mojaforma.pitanje3.checked=false;}
+	if (window.document.mojaforma.pitanje4.checked==true)
+	{tocnih=tocnih+1;}
+	else
+	{window.document.mojaforma.pitanje4.checked=true;}
+alert("Imate "+tocnih+" tocnih odgovara! Pogledajte tocne rezultate.");
+}
+//-->
+</SCRIPT>
+</HEAD>
+  
+<BODY >
+<H2>Odgovorite na slijedeca pitanja:</H2>
+<FORM NAME="mojaforma">
+<INPUT TYPE="checkbox" NAME="pitanje1">
+Hrvatska je 1998. bila treï¿½a na Svjetskom prvenstvu.<BR>
+<INPUT TYPE="checkbox" NAME="pitanje2">
+Izgubili smo od Francuske u polufinalu.<BR>
+<INPUT TYPE="checkbox" NAME="pitanje3">
+Zlatnu kopaï¿½ku je dobio Boban.<BR>
+<INPUT TYPE="checkbox" NAME="pitanje4">
+Pariz je glavni grad Francuske.
+<P>
+<INPUT TYPE="button" VALUE="Rezultati kviza" onClick="rezkviza();">
+</FORM>
+</BODY>
+
+</HTML>

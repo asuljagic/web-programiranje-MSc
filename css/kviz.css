@@ -1,0 +1,19 @@
+h1,h3 {
+    text-align: center;
+}
+
+form {
+    margin: auto;
+    width: 600px;
+}
+
+div {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    form{
+        margin:auto;
+        width: 400px;
+    }
+}
