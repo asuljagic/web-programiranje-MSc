@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/zavrsni1.css">
+    <title>Završni zadatak 1</title>
+    <script>
+      function ispisiPoruku(){
+        if(window.document.mojaforma1.starost[0].checked == true)
+            alert("Ćao maleni/a");
+        if(window.document.mojaforma1.starost[1].checked==true)
+            alert("Spremni za školske pustolovine?");
+        if(window.document.mojaforma1.starost[2].checked == true)
+            alert("Spremni za životne pustolovine?");
+        if(window.document.mojaforma1.starost[3].checked == true)
+            alert("Sretno!");
+            
+      }
+
+      function savjet(){
+        var indexSpola = document.mojaforma2.spol.selectedIndex;
+        var choiceSpol = document.mojaforma2.spol.options[indexSpola].text;
+
+        var indexHrana=window.document.mojaforma2.hrana.selectedIndex;
+        var choicehrana=window.document.mojaforma2.hrana.options[indexHrana].text;
+
+        alert("Vi ste " + choiceSpol + " i volite jesti " + choicehrana + "." );
+      }
+
+      function cekirajSve(){
+        var i=0;
+	    while (i < document.mojaforma3.elements.length)
+	    {
+	    document.mojaforma3.elements[i].checked=true;
+	    alert(i + ". odabir je cekiran!");  
+        i++;
+        }
+    }
+
+    function cekirajSve2(){
+        for (var i=0; i < window.document.mojaforma4.elements.length; i++)
+	    {   
+	    window.document.mojaforma4.elements[i].checked=true;
+	    }
+    }
+
+    function iscrtaj(){
+        var i,j
+        for (i=0; i < 10; i++)
+{
+	for (j=0; j < 20; j++)
+	{
+		document.writeln("X");
+	}
+	document.writeln("<BR>");
+}
+    }
+
+    function ispuni(){
+        alert ("Ispunite zadana polja!")
+var odgovor= new Array();
+odgovor[0]=prompt ("Zivotinja muskog roda");
+odgovor[1]=prompt ("pridjev muskog roda, Kakav?");
+odgovor[2]=prompt ("glagol u proslom vremenu, radnja");
+odgovor[3]=prompt ("Objekt, Koga? Cega?");
+var recenica="";
+recenica=recenica+"Jednom davno bio je jedan "+odgovor[0];
+recenica=recenica+" koji je bio jako "+odgovor[1]+".";
+recenica=recenica+" U stvari bio je tako "+odgovor[1];
+recenica=recenica+" da je "+odgovor[2]+" "+odgovor[3]+".";
+
+window.document.writeln(recenica);
+    }
+
+var telime4=new Array();
+telime4["Adnan"]="8-1111";
+telime4["Marko"]="8-2222";
+telime4["Adi"]="8-3333";
+telime4["Suljo"]="8-4444";
+telime4["Fata"]="8-5555";
+telime4["Sanja"]="8-6666";
+telime4["Branko"]="8-7777";
+
+
+function pokazibroj(telefonimenik,ulaz)
+{
+var broj=telefonimenik[ulaz];
+
+window.document.mojaforma5.trazenibroj.value=broj;
+}
+
+var asocboje2=new Array();
+asocboje2["Adnan"]="navy";
+asocboje2["Marko"]="gold";
+asocboje2["Adi"]="silver";
+asocboje2["Suljo"]="green";
+asocboje2["Fata"]="blue";
+asocboje2["Sanja"]="indigo";
+asocboje2["Branko"]="red";
+
+function promjeniboju(paleta,ulaz)
+{alert(ulaz);
+var boja=paleta[ulaz];
+alert(boja);
+document.body.style.backgroundColor=boja;
+}
+
+function Timer(){
+    setTimeout("alert('Dobar dan');",1500);
+}
+
+var vrijeme;
+function promjena()
+{
+var broj=window.document.mojaforma7.tekst.value;
+broj=parseInt(broj)+1;
+window.document.mojaforma7.tekst.value=broj;
+vrijeme=setTimeout("promjena();",1000);
+}
+
+var slike=new Array();
+slike[0]= new Image();
+slike[0].src="prva.jpg";
+//stvaranje Image objekta
+//definiranje izvora Image objekta
+slike[1]= new Image();
+slike[1].src="druga.jpg";
+slike[2]= new Image();
+slike[2].src="treca.jpg";
+var vrijeme1;
+var indeks=0;
+function zamjenisliku1()
+{
+	window.document.mojaslika1.src=slike[indeks].src;
+	indeks++
+	if (indeks >=slike.length)
+	{
+		indeks=0;
+	}
+	
+	vrijeme1=setTimeout("zamjenisliku1();",50);
+}
+
+var vrijeme2;
+var vrijeme3;
+var indeks2=0;
+function zamjenisliku2()
+{
+	window.document.mojaslika2.src=slike[indeks].src;
+	indeks++
+	if (indeks >=slike.length)
+	{
+		indeks=0;
+	}
+	vrijeme2=setTimeout("zamjenisliku2();",1000);
+}
+function zamjenisliku3()
+{
+	window.document.mojaslika3.src=slike[indeks2].src;
+	indeks2++
+	if (indeks2 >=slike.length)
+	{
+		indeks2=0;
+	}
+	vrijeme3=setTimeout("zamjenisliku3();",500);
+}
+
+function ucitajKviz(){
+            var prozor = window.open("kviz.html","kviz");
+        }
+
+        function ucitajSlike(){
+        var slike_prozor=window.open("zavrsni2.html","slike","width=800,height=600,left=0,top=0");
+        }
+        var slike_prozor1;
+        function ucitajSlike2(){
+         slike_prozor1 =window.open("zavrsni2.html","slike3","width=500,height=350");
+        }
+        function zatvoriSliku(){
+            slike_prozor1.close();
+        }
+        function prikaziSekunde(){
+       var sekunde_prozor=window.open('/files/1.Pred_JavaScript/JavaSc2.htm',"sekunde","width=300,height=300");
+        }
+        function prikaziSlike(){
+       var slike_prozor=window.open('/files/2.Pred_JavaScript/JavaSc35FORM.htm',"slike","width=300,height=600");
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html" class="btn btn-info mt-1 ms-3 mb-1">Početna</a>
+    <h1 class="mb-2">Završni zadatak 1</h1>
+    <!-- primjer 23-->
+    <div>
+    <div>
+        <h5>Primjer 24</h5>
+    <form name = "mojaforma1" onclick="ispisiPoruku();">
+        Koliko imate godina?
+        <br>
+        <input type="radio" name="starost" id=""> Između 0 i 6 godina <br>
+        <input type="radio" name="starost" id=""> Između 6 i 18 godina <br>
+        <input type="radio" name="starost" id=""> Između 18 i 25 godina <br>
+        <input type="radio" name="starost" id=""> više od 25 godina <br>
+        <br>
+    </form>
+    </div>
+    <div>
+        <h5>Primjer 25</h5>
+        <form name="mojaforma2">
+        Kojeg ste spola? <br>
+        <select name="spol" size="2" id="">
+           <option> muško
+           <option>žensko
+        </select>
+        <br> <br>
+        Šta volite jesti? <br>
+        <select name="hrana" size="5" id="">
+            <option value=""> govedinu</option>
+            <option value=""> janjetinu</option>
+            <option value=""> piletinu</option>
+            <option value=""> kolač</option>
+            <option value=""> ništa od ponuđenog</option>
+        </select>
+        <br>  
+        <input type="button" class="btn btn-primary" value="Savjet" onclick="savjet();">
+        </form>
+    </div>
+     <div>
+         <h5>Primjer 26</h5>
+         <form name ="mojaforma3">
+             Omiljeni sport? <br>
+             <input type="checkbox" name="" id=""> fudbal <br>
+             <input type="checkbox" name="" id=""> košarka <br>
+             <input type="checkbox" name="" id=""> hokej <br>
+             <input type="checkbox" name="" id=""> tenis <br>
+             <input type="checkbox" name="" id=""> plivanje <br>
+             <input type="checkbox" name="" id=""> biciklizam <br>
+             <input type="checkbox" name="" id=""> boks 
+             <br>
+             <input type="button" class="btn btn-primary" value="Čekiraj sve" onclick="cekirajSve();">
+         </form>
+     </div>   
+     <div>
+        <h5>Primjer 27</h5>
+        <form name ="mojaforma4">
+            Omiljeni žanr filmova? <br>
+            <input type="checkbox" name="" id=""> triler <br>
+            <input type="checkbox" name="" id=""> akcija <br>
+            <input type="checkbox" name="" id=""> pustolovina <br>
+            <input type="checkbox" name="" id=""> naučna fantastika <br>
+            <input type="checkbox" name="" id=""> horor <br>
+            <input type="checkbox" name="" id=""> komedija <br>
+            <input type="checkbox" name="" id=""> western
+            <br>
+            <input type="button" class="btn btn-primary" value="Čekiraj sve" onclick="cekirajSve2();">
+        </form>
+     </div>
+     <div id="crtaj" style="display:inline" class="ms-5">
+         <h5>Primjer 29</h5>
+        <input type="button" class="btn btn-primary" value="Iscrtaj X" onclick="iscrtaj();"> <br>
+        <div class="d-block">
+            <p class="text-danger">NAPOMENA!!</p>
+        Napravi refresh  da se vratiš  na ovu stranicu!
+        </div>
+     </div>
+     <div style="display: inline;" class="ms-5">
+        <h5>Primjer 30</h5>
+        <input type="button" class="btn btn-primary" value="Ispuni pitalicu" onclick="ispuni();"> <br>
+        <div class="d-block">
+            <p class="text-danger">NAPOMENA!!</p>
+        Napravi refresh  da se vratiš  na ovu stranicu!
+        </div>
+     </div>
+    </div>
+    <div class="mt-3 ms-5">
+        <div class="me-5 ms-5">
+            <h5>Primjer 31</h5>
+            <form name="mojaforma5">
+                Ime:
+                <select onChange="pokazibroj(telime4, this.options[this.selectedIndex].value);">
+                <option value="Adnan">Adnan
+                <option value="Marko">Marko
+                <option value="Adi">Adi
+                <option value="Suljo">Suljo
+                <option value="Fata">Fata
+                <option value="Sanja">Sanja
+                <option value="Branko">Branko
+                </select>
+                <P> <br>
+                Broj:
+                <INPUT TYPE="text" NAME="trazenibroj" VALUE="" size="15">
+                </form>
+        </div>
+        <div class="ms-5 me-5">
+            <h5>Primjer 32</h5>
+            <form name="mojaforma6">
+                Ime:
+                <select onChange="promjeniboju(asocboje2, this.options[this.selectedIndex].value);">
+                <option value="Adnan">Adnan
+                <option value="Marko">Marko
+                <option value="Adi">Adi
+                <option value="Suljo">Suljo
+                <option value="Fata">Fata
+                <option value="Sanja">Sanja
+                <option value="Branko">Branko
+                </select>
+                
+                </form>
+        </div>
+        <div style="display: inline-block;" class="ms-5 me-5">
+            <h5>Primjer 33</h5> <br>
+            <input type="button" class="btn btn-primary" value="Timeout poruka" onclick="Timer();"> 
+         </div>
+         <div class="ms-5">
+             <h5>Primjer 34</h5>
+            <form name="mojaforma7">
+                <input type="text" name="tekst" value=0> <br> <br>
+                <input type="button" class="btn btn-primary" value="startaj vrijeme" onClick="clearTimeout(vrijeme); promjena();">
+                <input type="button" class="btn btn-success" value="zaustavi vrijeme" onClick="clearTimeout(vrijeme); ">
+                <!--clearTimeout- bri¹e zadnji postignuti vrem. interval preko
+                varijable vrijeme: obavezna upotreba varijable preko koje æe 
+                djelovati clearTimeout funkcija.
+                Vi¹estruko startanje Timera stvara paralelne timere.
+                Zbog toga treba napraviti promjenu:
+                <input type="button" value="startaj vrijeme" onClick="clearTimeout(vrijeme); promjena();">
+                Iznimka od pravila: deklaracija varijable vrijeme izvan funkcije,
+                samo tako se mogla primjeniti pravilno clearTimeout funkcija -->
+                </form>
+         </div>
+         
+    </div>
+    <h3 class="mt-2 bg-secondary text-light">Show time</h3>
+    <div class="mt-3 ms-5">
+        <div>
+            <h5>Primjer 35</h5>
+            <img name="mojaslika1" src="prva.jpg">
+
+            <FORM>
+                <input type="button" class="btn btn-primary" value="startaj show" onClick="clearTimeout(vrijeme1); zamjenisliku1();">
+                <input type="button" class="btn btn-success" value="zaustavi show" onClick="clearTimeout(vrijeme1);">
+            </FORM>
+         </div>
+        <div>
+            <h5>Primjer 36</h5>
+            <img name="mojaslika2" src="prva.jpg" class="mt-1">
+
+            <FORM>
+                <input type="button" class="btn btn-primary" value="startaj show" onClick="clearTimeout(vrijeme2); zamjenisliku2();">
+                <input type="button" class="btn btn-success" value="zaustavi show" onClick="clearTimeout(vrijeme2);">
+            </FORM>
+            <img name="mojaslika3" src="prva.jpg" class="ms-1 mt-1">
+
+            <FORM>
+                <input type="button" class="btn btn-primary" value="startaj show" onClick="clearTimeout(vrijeme3); zamjenisliku3();">
+                <input type="button" class="btn btn-success" value="zaustavi show" onClick="clearTimeout(vrijeme3);">
+            </FORM>
+        </div>
+    </div>
+    <h3 class="mt-3 mb-3 bg-secondary text-light">Primjeri sa učitavanjem</h3>
+    <div >
+        <div>
+            <h5>Primjer 37</h5>
+            <input type="button" class="btn btn-primary" value="Učitaj Kviz" onclick="ucitajKviz();">
+        </div>
+        <div>
+            <h5>Primjer 39</h5>
+            <a href="./files/2.Pred_JavaScript/JavaSc35FORM.htm" class="btn btn-primary" target="slike" onclick="ucitajSlike();"> Učitaj slike</a>
+        </div>
+        <div>
+            <h5>Primjer 40</h5>
+            <a href="./files/2.Pred_JavaScript/JavaSc35FORM.htm" class="btn btn-primary me-3 mb-1" target="slike3" onclick="ucitajSlike2();"> Učitaj slike</a>
+            <input type="button" class="btn btn-danger" value="Zatvori ga" onClick="zatvoriSliku();"> </input>
+        </div>
+        <div>
+            <h5>Primjer 41</h5>
+            <input type="button" class="btn btn-primary me-2 mb-1" value="Stavi sekunde" onClick="prikaziSekunde(); self.focus();"> </input>
+            <input type="button" class="btn btn-success" value="Stavi slike" onClick="prikaziSlike(); self.focus();"> </input>
+        </div>
+        <div>
+            <h5>Primjeri 42 i 43</h5>
+            Ne rade ništa posebno osim da pokažu <br> da sa "opener" možemo pristupiti roditeljskom prozoru.
+        </div>
+    </div>
+   
+    
+    
+</body>
+</html>

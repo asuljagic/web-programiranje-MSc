@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    
+    
+}
+
+h5{
+    color: blue;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+img{
+    height: 250px;
+    width: 250px;
+}
+
+h1,h3{
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    div{
+        display: grid;
+        justify-content: center;
+    }
+}
+
+
+
