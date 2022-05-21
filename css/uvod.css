@@ -2,12 +2,7 @@ h1{
     text-align: center;
 }
 
-.zadnji-grid{
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    row-gap: 1rem;
-    margin: 0 23% 0 23%;
-}
+
 
 @media screen and (max-width: 1020px){
     .grid-container{
@@ -22,5 +17,11 @@ h1{
 @media screen and (min-width: 1025px){
     .grid-container{
         text-align: center;
+    }
+    .zadnji-grid{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        row-gap: 1rem;
+        margin: 0 23% 0 23%;
     }
 }
