@@ -10,13 +10,13 @@
     <script>
       function ispisiPoruku(){
         if(window.document.mojaforma1.starost[0].checked == true)
-            alert("Ćao maleni/a");
+            alert("Dobar dan Adnane!");
         if(window.document.mojaforma1.starost[1].checked==true)
-            alert("Spremni za školske pustolovine?");
+            alert("Dobar dan Marko!");
         if(window.document.mojaforma1.starost[2].checked == true)
-            alert("Spremni za životne pustolovine?");
+            alert("Dobar dan Adi!");
         if(window.document.mojaforma1.starost[3].checked == true)
-            alert("Sretno!");
+            alert("Dobar dan profesore!");
             
       }
 
@@ -27,7 +27,10 @@
         var indexHrana=window.document.mojaforma2.hrana.selectedIndex;
         var choicehrana=window.document.mojaforma2.hrana.options[indexHrana].text;
 
-        alert("Vi ste " + choiceSpol + " i volite jesti " + choicehrana + "." );
+        var indexGrad=window.document.mojaforma2.grad.selectedIndex;
+        var choicegrad=window.document.mojaforma2.grad.options[indexHrana].text;
+
+        alert("Vi ste " + choiceSpol + " i volite jesti " + choicehrana + " i voljeli bi otputovati u " + choicegrad + ".");
       }
 
       function cekirajSve(){
@@ -198,12 +201,12 @@ function ucitajKviz(){
     <div>
         <h5>Primjer 24</h5>
     <form name = "mojaforma1" onclick="ispisiPoruku();">
-        Koliko imate godina?
+        Koga želite pozdraviti?
         <br>
-        <input type="radio" name="starost" id=""> Između 0 i 6 godina <br>
-        <input type="radio" name="starost" id=""> Između 6 i 18 godina <br>
-        <input type="radio" name="starost" id=""> Između 18 i 25 godina <br>
-        <input type="radio" name="starost" id=""> više od 25 godina <br>
+        <input type="radio" name="starost" id=""> Adnana <br>
+        <input type="radio" name="starost" id=""> Marka <br>
+        <input type="radio" name="starost" id=""> Adija <br>
+        <input type="radio" name="starost" id=""> Profesora <br>
         <br>
     </form>
     </div>
@@ -215,16 +218,19 @@ function ucitajKviz(){
            <option> muško
            <option>žensko
         </select>
-        <br> <br>
+        <br> 
         Šta volite jesti? <br>
-        <select name="hrana" size="5" id="">
-            <option value=""> govedinu</option>
+        <select name="hrana" size="2" id="">
             <option value=""> janjetinu</option>
             <option value=""> piletinu</option>
-            <option value=""> kolač</option>
-            <option value=""> ništa od ponuđenog</option>
         </select>
         <br>  
+        Koji vam je omiljeni grad? <br>
+        <select name="grad" size="3" id="">
+            <option value="">Sarajevo</option>
+            <option value="">Zagreb</option>
+            <option value="">Beč</option>
+        </select> <br>
         <input type="button" class="btn btn-primary" value="Savjet" onclick="savjet();">
         </form>
     </div>
